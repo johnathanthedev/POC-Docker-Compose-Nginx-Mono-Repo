@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+  poc-mono-startup-frontend:
+    container_name: poc-mono-startup-frontend-container
+    build:
+      context: ./POC-Mono-Startup-Frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./POC-Mono-Startup-Frontend/src:/usr/POC-Mono-Startup-Frontend/src
+    command: npm start
+    ports:
+      - "3000:3000"
+    tty: true
+    stdin_open: true
+  poc-mono-startup-blog-frontend:
+    container_name: poc-mono-startup-blog-frontend-container
+    build:
+      context: ./POC-Mono-Startup-Blog-Frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./POC-Mono-Startup-Blog-Frontend/src:/usr/POC-Mono-Startup-Blog-Frontend/src
+    command: npm start
+    ports:
+      - "3001:3001"
+    tty: true
+    stdin_open: true
+  poc-mono-startup-admin-dashboard-frontend:
+    container_name: poc-mono-startup-admin-dashboard-frontend-container
+    build:
+      context: ./POC-Mono-Startup-Admin-Dashboard-Frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./POC-Mono-Startup-Admin-Dashboard-Frontend/src:/usr/POC-Mono-Startup-Admin-Dashboard-Frontend/src
+    command: npm start
+    ports:
+      - "3002:3002"
+    tty: true
+    stdin_open: true
