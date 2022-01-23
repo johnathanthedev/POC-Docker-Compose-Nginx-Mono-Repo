@@ -87,8 +87,6 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 Use the `BLANK_README.md` to get started.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Built With
 
 *Working on adding support for more technologies*
@@ -97,65 +95,63 @@ Use the `BLANK_README.md` to get started.
 * [Nginx](https://www.nginx.com/)
 * [Docker](https://www.docker.com/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Starting off, you will need some things installed on your machine.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Npm
+* Node
+* Nginx
+* Docker
+* Docker-compose
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/johnathanthedev/POC-Docker-Compose-Nginx-Mono-Repo.git
    ```
-3. Install NPM packages
+   
+2. cd into cloned repo
    ```sh
-   npm install
+   cd POC-Docker-Compose-Nginx-Mono-Repo
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   
+3. Get latest
+   ```sh
+   git submodule update --init --recursive
+   git submodule foreach git checkout main
+   git submodule foreach git pull origin main
    ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+   
+4. Start up server
+    ```sh
+    docker-compose up --build
+    ```
+   
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+The best way to utilize this repository would be as a reference point when working with docker-compose and nginx in your local machine.
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [] Add Rails API + Postgresl support
+- [] Add Rails API + Mysql support
+- [] Add Rails API + MongoDB support
+- [] Add Node/Express API + Postgresl support
+- [] Add Node/Express API + Mysql support
+- [] Add Node/Express API + MongoDB support
+- [] Add Vue support
+- [] Add static html support
+- [] Add webpack support
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+See the [open issues](https://github.com/johnathanthedev/POC-Docker-Compose-Nginx-Mono-Repo/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -171,23 +167,17 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@snorlax_dev](https://twitter.com/snorlax_dev) - johnathanthedev@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Project Link: [https://github.com/johnathanthedev/POC-Docker-Compose-Nginx-Mono-Repo](https://github.com/johnathanthedev/POC-Docker-Compose-Nginx-Mono-Repo)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -202,8 +192,6 @@ Use this space to list resources you find helpful and would like to give credit 
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
