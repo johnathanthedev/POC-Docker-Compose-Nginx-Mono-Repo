@@ -177,7 +177,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@snorlax_dev](https://twitter.com/snorlax_dev) - johnathanthedev@gmail.com
+Johnathan Guzman - [@snorlax_dev](https://twitter.com/snorlax_dev) - johnathanthedev@gmail.com
 
 Project Link: [https://github.com/johnathanthedev/POC-Docker-Compose-Nginx-Mono-Repo](https://github.com/johnathanthedev/POC-Docker-Compose-Nginx-Mono-Repo)
 
