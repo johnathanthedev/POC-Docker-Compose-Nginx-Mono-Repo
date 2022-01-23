@@ -1,0 +1,9 @@
+[submodule "POC-Mono-Startup-Frontend"]
+	path = POC-Mono-Startup-Frontend
+	url = https://github.com/johnathanthedev/POC-Mono-Startup-Frontend.git
+[submodule "POC-Mono-Startup-Blog-Frontend"]
+	path = POC-Mono-Startup-Blog-Frontend
+	url = https://github.com/johnathanthedev/POC-Mono-Startup-Blog-Frontend.git
+[submodule "POC-Mono-Startup-Admin-Dashboard-Frontend"]
+	path = POC-Mono-Startup-Admin-Dashboard-Frontend
+	url = https://github.com/johnathanthedev/POC-Mono-Startup-Admin-Dashboard-Frontend.git
