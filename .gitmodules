@@ -7,3 +7,6 @@
 [submodule "POC-Mono-Startup-Admin-Dashboard-Frontend"]
 	path = POC-Mono-Startup-Admin-Dashboard-Frontend
 	url = https://github.com/johnathanthedev/POC-Mono-Startup-Admin-Dashboard-Frontend.git
+[submodule "POC-Mono-Startup-Rails-API-And-Postgres"]
+	path = POC-Mono-Startup-Rails-API-And-Postgres
+	url = https://github.com/johnathanthedev/POC-Mono-Startup-Rails-API-And-Postgres.git
