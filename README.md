@@ -131,6 +131,8 @@ Starting off, you will need some things installed on your machine.
     ```sh
     docker-compose up --build
     ```
+    
+5. Head to http://localhost:8080/
    
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -140,15 +142,15 @@ The best way to utilize this repository would be as a reference point when worki
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Add Rails API + Postgresl support
-- [] Add Rails API + Mysql support
-- [] Add Rails API + MongoDB support
-- [] Add Node/Express API + Postgresl support
-- [] Add Node/Express API + Mysql support
-- [] Add Node/Express API + MongoDB support
-- [] Add Vue support
-- [] Add static html support
-- [] Add webpack support
+- [ ] Add Rails API + Postgresl support
+- [ ] Add Rails API + Mysql support
+- [ ] Add Rails API + MongoDB support
+- [ ] Add Node/Express API + Postgresl support
+- [ ] Add Node/Express API + Mysql support
+- [ ] Add Node/Express API + MongoDB support
+- [ ] Add Vue support
+- [ ] Add static html support
+- [ ] Add webpack support
 
 
 See the [open issues](https://github.com/johnathanthedev/POC-Docker-Compose-Nginx-Mono-Repo/issues) for a full list of proposed features (and known issues).
