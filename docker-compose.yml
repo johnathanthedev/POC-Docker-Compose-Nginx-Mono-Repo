@@ -6,6 +6,8 @@ services:
       - "8080:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./POC-Mono-Startup-Rails-API-And-Postgres:/poc-mono-startup-rails-api-and-postgres
+    restart: unless-stopped
   poc-mono-startup-frontend:
     container_name: poc-mono-startup-frontend-container
     build:
@@ -18,6 +20,7 @@ services:
       - "3000:3000"
     tty: true
     stdin_open: true
+    restart: unless-stopped
   poc-mono-startup-blog-frontend:
     container_name: poc-mono-startup-blog-frontend-container
     build:
@@ -30,6 +33,7 @@ services:
       - "3001:3001"
     tty: true
     stdin_open: true
+    restart: unless-stopped
   poc-mono-startup-admin-dashboard-frontend:
     container_name: poc-mono-startup-admin-dashboard-frontend-container
     build:
@@ -42,3 +46,34 @@ services:
       - "3002:3002"
     tty: true
     stdin_open: true
+    restart: unless-stopped
+  poc-mono-startup-rails-api-and-postgres-database:
+    container_name: poc-mono-startup-rails-api-and-postgres-database-container
+    image: postgres:latest
+    environment:
+    - POSTGRES_USER=johnathanthedev
+    - POSTGRES_PASSWORD=12345678
+    - POSTGRES_DB=POC_Mono_Startup_Rails_API_And_Postgres_development
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./POC-Mono-Startup-Rails-API-And-Postgres/tmp/db:/var/lib/postgresql/data
+    restart: unless-stopped
+  poc-mono-startup-rails-api-and-postgres:
+    container_name: poc-mono-startup-rails-api-and-postgres-container
+    depends_on: 
+      - poc-mono-startup-rails-api-and-postgres-database
+    build:
+      context: ./POC-Mono-Startup-Rails-API-And-Postgres
+      dockerfile: Dockerfile
+    volumes:
+      - ./POC-Mono-Startup-Rails-API-And-Postgres:/usr/poc-mono-startup-rails-api-and-postgres
+    command: bash -c "rails db:create && rails db:migrate && bundle exec puma -C config/puma.rb"
+    ports:
+      - "3003:3003"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+volumes:
+  poc-mono-startup-rails-api-and-postgres-database:
+  
