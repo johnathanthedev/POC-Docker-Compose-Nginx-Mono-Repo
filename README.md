@@ -103,6 +103,8 @@ Starting off, you will need some things installed on your machine.
 
 * Npm
 * Node
+* Ruby
+* Ruby on Rails
 * Nginx
 * Docker
 * Docker-compose
