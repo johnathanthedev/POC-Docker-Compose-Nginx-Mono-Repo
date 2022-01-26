@@ -140,7 +140,7 @@ The best way to utilize this repository would be as a reference point when worki
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Rails API + Postgresl support
+- [x] Add Rails API + Postgresl support
 - [ ] Add Rails API + Mysql support
 - [ ] Add Rails API + MongoDB support
 - [ ] Add Node/Express API + Postgresl support
