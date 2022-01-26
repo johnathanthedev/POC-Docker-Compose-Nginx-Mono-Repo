@@ -92,6 +92,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 * [React.js](https://reactjs.org/)
 * [Nginx](https://www.nginx.com/)
 * [Docker](https://www.docker.com/)
+* [Ruby on Rails](https://rubyonrails.org/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
